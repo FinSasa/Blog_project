@@ -1,0 +1,11 @@
+{% extends "blog/header.html" %}
+{% block content %}
+<h3><a href="/news/{{post.id}}">{{ post.title }}</a></h3>
+<h6> on {{ post.date }}</h6>
+
+<div class = "container">
+	{{ post.body|safe|linebreaks}}
+	<img src="{{post.image.url}}" class="img-responsive">
+</div>
+<br><br>
+{% endblock %}
