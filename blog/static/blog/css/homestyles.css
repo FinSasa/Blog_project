@@ -1,0 +1,28 @@
+
+body {
+    background-image: url("http://www.blirk.net/wallpapers/1280x720/gradient-wallpaper-1.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+h1 {
+    color: teal;
+    text-shadow: 2px 2px PaleTurquoise;
+    font-family: Arial Black;
+    font-size: 300%;
+	text-align:center;
+}
+p  {
+    color: DarkSlateBlue;
+    font-family: courier;
+    font-size: 120%;
+    text-align:center;
+}
+
+pl {
+  color: DarkSlateBlue;
+  font-family: courier;
+  font-size: 120%;
+  text-align:left;
+}
