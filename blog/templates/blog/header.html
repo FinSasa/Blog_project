@@ -6,6 +6,7 @@
 	<meta charset="utf-8" />
 	{% load staticfiles %}
 	<link rel="stylesheet" href="{% static "blog/css/bootstrap.min.css" %}" type = "text/css"/>
+	<link rel="stylesheet" href="{% static "blog/css/homestyles.css" %}"  type = "text/css" />
 	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
 
 	<style type="text/css">
@@ -16,14 +17,17 @@
 	</style>
 </head>
 
+
 <body class="body" style="background-color:#f6f6f6">
 	<div class="container-fluid" style="min-height:95%; ">
 		<div class="row">
 			  <div class="col-sm-2">
 				  <br>
 				  <center>
+					<a href='/'>
 					<img src="{% static 'blog/images/index.jpeg' %}" class="responsive-img" style='max-height:100000px;' alt="immagine">
-				  </center>
+				</a>
+					</center>
 			  </div>
 			  <div class="col-sm-10">
 				  <br>
@@ -32,6 +36,18 @@
 				  </center>
 			  </div>
 		</div><hr>
+
+<div class="basic">
+
+
+	<form id="searchbox" method="post"  action = "{% url "search" %}" >
+			{% csrf_token %}
+	    <input name = keyword id="keyword" type="text" placeholder="Type here...">
+	    <input id="submit"  type="submit" value="Search" >
+	</form>
+
+
+</div>
 
 		<div class="row">
 		  <div class="col-sm-2">
@@ -59,9 +75,9 @@
 		</div>
 	</div>
 	<footer>
-		<div class="container-fluid" style='margin-left:15px'>
-			<p><a href="#" target="blank">Contact</a> | <a href="#" target="blank">LinkedIn</a> | <a href="#" target="blank">Twitter</a> | <a href="#" target="blank">Google+</a></p>
-		</div>
+			<div class="container-fluid" style='margin-left:15px'>
+				<p> <a href='/redirectfb/' target="blank">facebook</a> | <a href='/redirectgg/' target="blank">Google+</a></p>
+			</div>
 	</footer>
 
 </body>

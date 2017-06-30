@@ -5,7 +5,9 @@
 
 <div class = "container">
 	{{ post.body|safe|linebreaks}}
-	<img src="{{post.image.url}}" class="img-responsive">
+	{% if post.image %}
+	<img src="{{post.image.url|default_if_none:'#'}}" class="img-responsive">
+	{% endif %}
 </div>
 <br><br>
 {% endblock %}
