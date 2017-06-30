@@ -3,7 +3,7 @@
 <h3><a href="/news/{{post.id}}">{{ post.title }}</a></h3>
 <h6> on {{ post.date }}</h6>
 
-<div class = "container">
+<div>
 	{{ post.body|safe|linebreaks}}
 	{% if post.image %}
 	<img src="{{post.image.url|default_if_none:'#'}}" class="img-responsive">
