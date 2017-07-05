@@ -15,6 +15,7 @@ urlpatterns = [
     url(r'^redirectfb/', views.redirectfb, name='redirectfb'),
     url(r'^redirectgg/', views.redirectgg, name='redirectgg'),
     url(r'^search/', views.search, name='search'),
+    #url(r'^comments/', include('django_comments_xtd.urls')),
 
 
 
